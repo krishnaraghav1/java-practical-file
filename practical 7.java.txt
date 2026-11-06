@@ -1,0 +1,40 @@
+
+class Demo {
+
+    // Constructor
+    Demo() {
+        System.out.println("Object is constructed.");
+    }
+
+    // Method
+    void display() {
+        System.out.println("Object is being used.");
+    }
+
+    // Finalize method (for demonstration only)
+    @Override
+    protected void finalize() {
+        System.out.println("Garbage collector is cleaning the object.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Creating an object
+        Demo obj = new Demo();
+
+        // Using the object
+        obj.display();
+
+        // Removing the reference
+        obj = null;
+
+        System.out.println("Object reference removed.");
+
+        // Requesting garbage collection
+        System.gc();
+
+        System.out.println("Garbage collection requested.");
+    }
+}

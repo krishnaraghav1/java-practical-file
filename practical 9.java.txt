@@ -1,0 +1,63 @@
+
+class Employee {
+
+    // Instance variables
+    String name;
+    double salary;
+
+    // Static variable to count employees
+    static int employeeCount = 0;
+
+    // No-argument constructor
+    Employee() {
+        this("Unknown", 0.0);
+    }
+
+    // Parameterized constructor
+    Employee(String name, double salary) {
+
+        // Using this to distinguish instance variables
+        // from constructor parameters
+        this.name = name;
+        this.salary = salary;
+
+        // Increment employee count
+        employeeCount++;
+    }
+
+    // Method to display employee details
+    void display() {
+        System.out.println("Employee Name: " + this.name);
+        System.out.println("Salary: " + this.salary);
+        System.out.println("----------------------");
+    }
+
+    // Static method to display employee count
+    static void displayCount() {
+        System.out.println("Total Employees: " + employeeCount);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Creating objects using no-argument constructor
+        Employee e1 = new Employee();
+
+        // Creating objects using parameterized constructor
+        Employee e2 = new Employee("Rahul", 30000);
+        Employee e3 = new Employee("Priya", 40000);
+        Employee e4 = new Employee("Amit", 35000);
+
+        // Displaying employee details
+        System.out.println("Employee Details:");
+
+        e1.display();
+        e2.display();
+        e3.display();
+        e4.display();
+
+        // Calling static method
+        Employee.displayCount();
+    }
+}

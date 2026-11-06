@@ -1,0 +1,42 @@
+
+class Calculator {
+
+    // Addition of two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Addition of three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Addition of two double values
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    // Addition of an integer and a double
+    double add(int a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Calculator c = new Calculator();
+
+        System.out.println("Addition of two integers: "
+                           + c.add(10, 20));
+
+        System.out.println("Addition of three integers: "
+                           + c.add(10, 20, 30));
+
+        System.out.println("Addition of two double values: "
+                           + c.add(10.5, 20.5));
+
+        System.out.println("Addition of integer and double: "
+                           + c.add(10, 5.5));
+    }
+}
